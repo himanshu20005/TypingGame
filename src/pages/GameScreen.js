@@ -71,7 +71,7 @@ const GameScreen = ({ prevTime, setPrevTime }) => {
 
             </div>
             <div className={styles.gameContainer}>
-                <Typography align='center' variant='h4' className={styles.randomCharater}>{isActive ? !isPaused ? randomCharacter.toUpperCase() : 'Paused' : currentTime > prevTime ? 'Fail :(' : 'Success!'}</Typography>
+                <Typography align='center' variant='h4' className={styles.randomCharater}>{isActive ? !isPaused ? randomCharacter.toUpperCase() : 'Paused' : currentTime > prevTime ? 'Fail :(' : prevTime !== 0 ? 'Success!' : "Ready!"}</Typography>
                     <div className={styles.inputContainer}>
                 {isActive && <input 
                     className={styles.inputField}
